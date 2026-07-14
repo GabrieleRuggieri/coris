@@ -1,4 +1,4 @@
-# CORIS — CardioOncology Risk Intelligence System
+# CORIS — Cardio Oncology Risk Intelligence System
 
 **Piattaforma predittiva di ML per la stratificazione del rischio di cardiotossicità indotta da terapie oncologiche**
 
