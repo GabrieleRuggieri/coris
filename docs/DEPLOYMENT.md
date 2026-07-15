@@ -26,7 +26,18 @@ Questo avrà anche un vantaggio architetturale, non solo economico: girando in l
 
 I componenti proposti sono disponibili in edizioni open source; licenze e versioni effettive dovranno essere verificate e registrate con un SBOM durante l'implementazione.
 
-## 3. Struttura Docker Compose (esempio concettuale)
+## 3. Struttura Docker Compose
+
+**Fase 0 (attuale):** il file [`docker-compose.yml`](../docker-compose.yml) nella root avvia solo PostgreSQL. Copiare [`.env.example`](../.env.example) in `.env` prima dell'avvio.
+
+```bash
+cp .env.example .env
+docker compose up -d postgres
+```
+
+**Fase 1+:** verranno aggiunti `api-gateway`, `ml-service` e `frontend` allo stesso Compose. I servizi opzionali (TimescaleDB, ClickHouse, Keycloak, ecc.) saranno introdotti tramite profili separati.
+
+### Esempio target completo (fase 2+)
 
 ```yaml
 # docker-compose.yml (estratto concettuale, da completare in fase di implementazione)

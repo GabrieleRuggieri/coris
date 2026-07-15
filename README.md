@@ -6,7 +6,7 @@
 
 ## Indice del progetto
 
-Questo repository di documentazione è diviso per argomento, così ogni file resta focalizzato e consultabile in autonomia:
+Questo repository contiene la documentazione di CORIS e, a partire dalla fase di sviluppo, il codice del prototipo. I documenti sono divisi per argomento, così ogni file resta focalizzato e consultabile in autonomia:
 
 | File | Contenuto |
 |---|---|
@@ -27,9 +27,17 @@ Questo repository di documentazione è diviso per argomento, così ogni file res
 
 ## Stato del progetto
 
-Il riepilogo aggiornato di componenti, modelli, dati e milestone è mantenuto in [`docs/STATUS.md`](docs/STATUS.md), unica fonte per gli stati di avanzamento.
+Il riepilogo aggiornato di componenti, modelli, dati, backlog e milestone è mantenuto in [`docs/STATUS.md`](docs/STATUS.md), unica fonte per gli stati di avanzamento.
 
 Per “prototipo completo” si intende una dimostrazione end-to-end con dati non clinici. **Non è un dispositivo medico, non è certificato e non deve supportare decisioni cliniche reali.**
+
+### Avvio locale (fase 0)
+
+```bash
+cp .env.example .env
+docker compose up -d postgres
+./scripts/verify-phase0.sh
+```
 
 ---
 
